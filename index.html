@@ -10,475 +10,538 @@
 
     /* HEADER */
     header {
-      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-      color: white; text-align: center; padding: 60px 20px 40px;
+      background: linear-gradient(135deg, #1a237e, #283593);
+      color: white;
+      padding: 50px 20px 30px;
+      text-align: center;
     }
-    header h1 { font-size: 2.8em; letter-spacing: 1px; }
-    header p.tagline { font-size: 1.1em; margin: 10px 0 20px; color: #a0c4ff; }
-    header .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; font-size: 0.95em; }
-    header .contact-info a { color: #a0c4ff; text-decoration: none; }
+    header h1 { font-size: 2.5em; letter-spacing: 2px; margin-bottom: 8px; }
+    header .tagline {
+      font-size: 1em;
+      color: #c5cae9;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+    header .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      font-size: 0.9em;
+      color: #e8eaf6;
+    }
+    header .contact-info a { color: #90caf9; text-decoration: none; }
+    header .contact-info a:hover { text-decoration: underline; }
 
     /* NAV */
     nav {
-      background: #0f3460; position: sticky; top: 0; z-index: 999;
-      display: flex; justify-content: center; flex-wrap: wrap; gap: 5px; padding: 12px;
+      background: #283593;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
-      color: #fff; text-decoration: none; padding: 8px 18px;
-      border-radius: 25px; font-size: 0.9em; transition: background 0.3s;
+      color: #c5cae9;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      transition: background 0.2s;
     }
-    nav a:hover { background: #e94560; }
+    nav a:hover { background: #1a237e; color: white; }
 
     /* SECTIONS */
-    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-    section h2 { font-size: 2em; margin-bottom: 30px; color: #0f3460; border-left: 5px solid #e94560; padding-left: 15px; }
+    section {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section h2 {
+      font-size: 1.5em;
+      color: #1a237e;
+      border-bottom: 2px solid #c5cae9;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
 
     /* ABOUT */
-    .about-box {
-      background: white; border-radius: 12px; padding: 35px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08); line-height: 1.8; font-size: 1.05em;
-    }
-    .about-box strong { color: #e94560; }
+    .about-text { line-height: 1.8; font-size: 0.97em; }
+    .about-text strong { color: #1a237e; }
 
     /* SKILLS */
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
     .skill-card {
-      background: white; border-radius: 12px; padding: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.07); text-align: center;
+      background: white;
+      border-radius: 8px;
+      padding: 16px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     }
-    .skill-card h4 { color: #0f3460; margin-bottom: 12px; font-size: 1em; border-bottom: 2px solid #e94560; padding-bottom: 8px; }
-    .skill-tag {
-      display: inline-block; background: #eef2ff; color: #0f3460;
-      border-radius: 20px; padding: 5px 12px; margin: 4px; font-size: 0.85em; font-weight: 600;
+    .skill-card h3 {
+      font-size: 0.85em;
+      text-transform: uppercase;
+      color: #5c6bc0;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
-    .skill-tag.highlight { background: #e94560; color: white; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: #e8eaf6;
+      color: #283593;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.82em;
+    }
 
     /* PROJECTS */
     .project-card {
-      background: white; border-radius: 12px; padding: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 30px;
-      border-left: 5px solid #e94560;
+      background: white;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-left: 4px solid #3949ab;
     }
-    .project-card h3 { color: #0f3460; font-size: 1.3em; margin-bottom: 5px; }
-    .project-card .meta { color: #888; font-size: 0.9em; margin-bottom: 15px; }
-    .project-card .tags { margin-bottom: 15px; }
-    .project-card .tags span {
-      display: inline-block; background: #0f3460; color: white;
-      border-radius: 15px; padding: 4px 12px; margin: 3px; font-size: 0.8em;
+    .project-card h3 { color: #1a237e; font-size: 1.05em; margin-bottom: 4px; }
+    .project-card .meta {
+      font-size: 0.82em;
+      color: #888;
+      margin-bottom: 10px;
     }
-    .project-card ul { padding-left: 20px; line-height: 2; }
-    .project-card ul li::marker { color: #e94560; }
-    .mvc-highlight {
-      background: #fff8e1; border-left: 4px solid #f9a825;
-      padding: 12px 16px; border-radius: 8px; margin-top: 15px; font-size: 0.95em;
+    .project-card .stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+    .project-card .stack span {
+      background: #e8eaf6;
+      color: #283593;
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-size: 0.78em;
     }
-    .mvc-highlight strong { color: #e65100; }
+    .project-card ul { padding-left: 18px; font-size: 0.9em; line-height: 1.8; color: #444; }
 
     /* EXPERIENCE */
-    .timeline { position: relative; padding-left: 30px; }
-    .timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 3px; background: #e94560; }
-    .timeline-item { position: relative; margin-bottom: 35px; }
-    .timeline-item::before {
-      content: ''; position: absolute; left: -24px; top: 5px;
-      width: 14px; height: 14px; border-radius: 50%; background: #e94560; border: 3px solid white;
-      box-shadow: 0 0 0 3px #e94560;
+    .exp-item {
+      background: white;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-left: 4px solid #3949ab;
     }
-    .timeline-item h3 { color: #0f3460; font-size: 1.1em; }
-    .timeline-item .company { color: #e94560; font-weight: 600; }
-    .timeline-item .duration { color: #888; font-size: 0.9em; }
+    .exp-item.career-break {
+      border-left: 4px solid #90a4ae;
+      background: #f5f5f5;
+    }
+    .exp-item h3 { color: #1a237e; font-size: 1.05em; margin-bottom: 2px; }
+    .exp-item .company { color: #3949ab; font-weight: 600; font-size: 0.95em; }
+    .exp-item .period {
+      font-size: 0.82em;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .exp-item .stack-line {
+      font-size: 0.8em;
+      color: #666;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    .exp-item ul { padding-left: 18px; font-size: 0.9em; line-height: 1.8; color: #444; }
+    .exp-item ul li { margin-bottom: 4px; }
+    .exp-item ul li strong { color: #1a237e; }
 
     /* EDUCATION */
-    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .edu-card {
-      background: white; border-radius: 12px; padding: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.07); border-top: 4px solid #e94560;
+    .edu-item {
+      background: white;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-left: 4px solid #3949ab;
     }
-    .edu-card h3 { color: #0f3460; font-size: 1em; margin-bottom: 8px; }
-    .edu-card p { color: #555; font-size: 0.9em; line-height: 1.7; }
-    .edu-card .percentage { font-size: 1.3em; font-weight: bold; color: #e94560; margin-top: 10px; }
+    .edu-item h3 { color: #1a237e; font-size: 1em; margin-bottom: 4px; }
+    .edu-item p { font-size: 0.88em; color: #555; }
 
     /* CONTACT */
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .contact-card {
-      background: white; border-radius: 12px; padding: 25px; text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
     }
-    .contact-card .icon { font-size: 2em; margin-bottom: 10px; }
-    .contact-card a { color: #0f3460; text-decoration: none; font-weight: 600; }
-    .contact-card a:hover { color: #e94560; }
+    .contact-item {
+      background: white;
+      border-radius: 8px;
+      padding: 16px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      font-size: 0.9em;
+    }
+    .contact-item a { color: #3949ab; text-decoration: none; }
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* DOWNLOAD BUTTON */
+    .download-btn {
+      display: inline-block;
+      margin: 10px auto 30px;
+      padding: 12px 30px;
+      background: #1a237e;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: background 0.2s;
+    }
+    .download-btn:hover { background: #283593; }
+    .btn-wrap { text-align: center; }
 
     /* FOOTER */
     footer {
-      background: #1a1a2e; color: #aaa; text-align: center;
-      padding: 25px; font-size: 0.9em;
+      background: #1a237e;
+      color: #c5cae9;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85em;
+      margin-top: 40px;
     }
-    footer a { color: #a0c4ff; text-decoration: none; }
-
-    /* PORTFOLIO BADGE */
-    .portfolio-badge {
-      display: inline-block; background: #e94560; color: white;
-      padding: 10px 25px; border-radius: 25px; text-decoration: none;
-      font-weight: 600; margin-top: 15px; font-size: 0.95em;
-      transition: background 0.3s;
-    }
-    .portfolio-badge:hover { background: #c0392b; }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.9em; }
-      section h2 { font-size: 1.5em; }
-    }
+    footer a { color: #90caf9; text-decoration: none; }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 <header>
-  <h1>Monika Akash Shinde</h1>
-  <p class="tagline">Senior Software Engineer &nbsp;|&nbsp; .NET Core · C# · Angular · MVC · REST API · SQL Server</p>
+  <h1>MONIKA AKASH SHINDE</h1>
+  <div class="tagline">Senior Software Engineer &nbsp;|&nbsp; .NET Core · C# · ASP.NET MVC · Angular · REST API · SQL Server</div>
   <div class="contact-info">
-    <span>📞 +91 8788958177</span>
-    <span>📧 ermlkorde@gmail.com</span>
-    <span>📍 Navi Mumbai, Maharashtra</span>
-    <a href="https://linkedin.com/in/monika-s-25354a117" target="_blank">🔗 LinkedIn</a>
-    <a href="https://monika-shinde-tech.github.io/" target="_blank">🌐 Portfolio</a>
+    <span>Phone: +91 8788958177</span>
+    <span>Email: <a href="mailto:ermlkorde@gmail.com">ermlkorde@gmail.com</a></span>
+    <span>Location: Navi Mumbai, Maharashtra</span>
+    <span><a href="https://www.linkedin.com/in/monika-s-25354a117/" target="_blank">LinkedIn</a></span>
+    <span><a href="https://monika-shinde-tech.github.io/" target="_blank">Portfolio</a></span>
   </div>
 </header>
 
-<!-- NAV -->
+<!-- ===== NAV ===== -->
 <nav>
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
-  <a href="#mvc">MVC</a>
   <a href="#projects">Projects</a>
   <a href="#experience">Experience</a>
   <a href="#education">Education</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- ABOUT -->
+<!-- ===== ABOUT ===== -->
 <section id="about">
   <h2>👩‍💻 About Me</h2>
-  <div class="about-box">
+  <div class="about-text">
     <p>
-      Results-driven Software Engineer with <strong>8+ years of experience</strong> in analysis, design,
-      development, and maintenance of enterprise applications using
+      Results-driven <strong>Senior Software Engineer</strong> with <strong>8+ years of experience</strong>
+      in analysis, design, development, and maintenance of enterprise applications using
       <strong>C#, .NET Core, ASP.NET MVC, Angular, and MS SQL Server</strong>.
-      Currently at SurePrep (India) Pvt. Ltd., developing Webhook Agents, REST APIs,
-      and TransitHub solutions in the Tax domain.
+      Currently at <strong>SurePrep (India) Pvt. Ltd.</strong>, developing Webhook Agents,
+      REST APIs, and TransitHub solutions in the <strong>Tax domain</strong>.
     </p>
     <br/>
     <p>
-      I have hands-on experience with <strong>ASP.NET MVC</strong> for building scalable web applications
-      following the Model-View-Controller design pattern, <strong>Biometric SDK/API integration</strong>
-      (fingerprint, IRIS, face, and finger vein), led an <strong>Angular 1 → Angular 13 migration</strong>,
-      and developed Windows Services and FTP automation pipelines. I thrive in agile,
-      cross-functional teams and am passionate about clean, scalable code that delivers real-world impact.
+      Strong <strong>MVC expertise</strong> — implemented Model-View-Controller architecture across
+      multiple enterprise applications following <strong>SOLID Principles and Clean Architecture</strong>.
+      Led an <strong>Angular 1 → Angular 13 migration</strong> with Karma and Jasmine unit testing,
+      and developed Windows Services and FTP automation pipelines.
     </p>
     <br/>
-    <a href="https://monika-shinde-tech.github.io/" target="_blank" class="portfolio-badge">🌐 View My Portfolio</a>
+    <p>
+      Experienced with <strong>Azure</strong> (App Service, Azure SQL, Azure DevOps),
+      <strong>Agile/Scrum</strong> sprint delivery, and <strong>AI-assisted development</strong>
+      using GitHub Copilot and Claude AI — improving development velocity by <strong>30%</strong>.
+      Proven delivery both independently and in cross-functional agile teams.
+    </p>
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- ===== SKILLS ===== -->
 <section id="skills">
   <h2>🛠️ Technical Skills</h2>
   <div class="skills-grid">
+
     <div class="skill-card">
-      <h4>Core</h4>
-      <span class="skill-tag">C#</span>
-      <span class="skill-tag">.NET Core</span>
-      <span class="skill-tag">ASP.NET</span>
-      <span class="skill-tag">LINQ</span>
-      <span class="skill-tag highlight">MVC</span>
-      <span class="skill-tag">VB.NET</span>
+      <h3>Core Languages & Frameworks</h3>
+      <div class="tags">
+        <span class="tag">C#</span>
+        <span class="tag">.NET Core</span>
+        <span class="tag">ASP.NET MVC</span>
+        <span class="tag">LINQ</span>
+        <span class="tag">VB.NET</span>
+        <span class="tag">Entity Framework</span>
+      </div>
     </div>
+
     <div class="skill-card">
-      <h4>Frontend</h4>
-      <span class="skill-tag">Angular 13</span>
-      <span class="skill-tag">Bootstrap</span>
-      <span class="skill-tag">HTML5</span>
-      <span class="skill-tag">CSS3</span>
+      <h3>Frontend</h3>
+      <div class="tags">
+        <span class="tag">Angular 13</span>
+        <span class="tag">Bootstrap</span>
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+      </div>
     </div>
+
     <div class="skill-card">
-      <h4>API & Integration</h4>
-      <span class="skill-tag">REST API</span>
-      <span class="skill-tag">Webhook Agent</span>
-      <span class="skill-tag">TransitHub</span>
-      <span class="skill-tag">Biometric SDK</span>
+      <h3>API & Integration</h3>
+      <div class="tags">
+        <span class="tag">REST API</span>
+        <span class="tag">Webhook Agent</span>
+        <span class="tag">TransitHub</span>
+        <span class="tag">Biometric SDK</span>
+      </div>
     </div>
+
     <div class="skill-card">
-      <h4>Database</h4>
-      <span class="skill-tag">SQL Server</span>
-      <span class="skill-tag">Stored Procedures</span>
-      <span class="skill-tag">Data Migration</span>
+      <h3>Database</h3>
+      <div class="tags">
+        <span class="tag">SQL Server</span>
+        <span class="tag">Stored Procedures</span>
+        <span class="tag">Data Migration</span>
+      </div>
     </div>
+
     <div class="skill-card">
-      <h4>Testing & Tools</h4>
-      <span class="skill-tag">Karma</span>
-      <span class="skill-tag">Jasmine</span>
-      <span class="skill-tag">GitHub</span>
-      <span class="skill-tag">Visual Studio</span>
-      <span class="skill-tag">Windows Services</span>
-      <span class="skill-tag">FTP</span>
+      <h3>Cloud & DevOps</h3>
+      <div class="tags">
+        <span class="tag">Azure App Service</span>
+        <span class="tag">Azure SQL</span>
+        <span class="tag">Azure DevOps (ADO)</span>
+      </div>
     </div>
+
     <div class="skill-card">
-      <h4>Domains</h4>
-      <span class="skill-tag">Tax</span>
-      <span class="skill-tag">Inventory Mgmt</span>
-      <span class="skill-tag">Access Control</span>
+      <h3>Architecture & Patterns</h3>
+      <div class="tags">
+        <span class="tag">MVC</span>
+        <span class="tag">SOLID Principles</span>
+        <span class="tag">Clean Architecture</span>
+        <span class="tag">Separation of Concerns</span>
+      </div>
     </div>
+
+    <div class="skill-card">
+      <h3>Testing & Tools</h3>
+      <div class="tags">
+        <span class="tag">Karma</span>
+        <span class="tag">Jasmine</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Visual Studio</span>
+        <span class="tag">Windows Services</span>
+        <span class="tag">FTP</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Methodology</h3>
+      <div class="tags">
+        <span class="tag">Agile</span>
+        <span class="tag">Scrum</span>
+        <span class="tag">Sprint Planning</span>
+        <span class="tag">Code Review</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>AI Tools</h3>
+      <div class="tags">
+        <span class="tag">GitHub Copilot</span>
+        <span class="tag">Claude AI</span>
+        <span class="tag">AI-Assisted Development</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Domains</h3>
+      <div class="tags">
+        <span class="tag">Tax Processing</span>
+        <span class="tag">Inventory Management</span>
+        <span class="tag">Access Control</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- MVC SECTION (NEW) -->
-<section id="mvc">
-  <h2>🏗️ MVC Expertise</h2>
-  <div class="about-box">
-    <p>
-      Strong hands-on experience with <strong>ASP.NET MVC</strong> for building structured,
-      maintainable, and testable web applications using the
-      <strong>Model-View-Controller</strong> design pattern.
-    </p>
-    <br/>
-    <div class="skills-grid" style="margin-top:10px;">
-
-      <div class="skill-card">
-        <h4>🧩 Model</h4>
-        <p style="font-size:0.9em; color:#555; line-height:1.7;">
-          Designed robust data models and business logic layers using
-          <strong>C# classes</strong>, <strong>Entity Framework</strong>, and
-          <strong>SQL Server</strong>. Implemented data validation, relationships,
-          and migrations for enterprise-grade applications.
-        </p>
-      </div>
-
-      <div class="skill-card">
-        <h4>🖥️ View</h4>
-        <p style="font-size:0.9em; color:#555; line-height:1.7;">
-          Built dynamic, responsive UI using <strong>Razor Views</strong>,
-          <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>Bootstrap</strong>.
-          Redesigned 20+ web pages with modern templates ensuring cross-browser
-          compatibility and improved user experience.
-        </p>
-      </div>
-
-      <div class="skill-card">
-        <h4>⚙️ Controller</h4>
-        <p style="font-size:0.9em; color:#555; line-height:1.7;">
-          Developed controllers handling routing, request processing, and
-          response management. Integrated <strong>REST APIs</strong>,
-          implemented <strong>authentication & authorization</strong>,
-          and managed session and state effectively.
-        </p>
-      </div>
-
-      <div class="skill-card">
-        <h4>🔗 Routing & Filters</h4>
-        <p style="font-size:0.9em; color:#555; line-height:1.7;">
-          Configured custom routes, attribute routing, and action filters.
-          Applied <strong>authorization filters</strong> and
-          <strong>exception handling filters</strong> for secure and
-          fault-tolerant applications.
-        </p>
-      </div>
-
-      <div class="skill-card">
-        <h4>🔒 Authentication</h4>
-        <p style="font-size:0.9em; color:#555; line-height:1.7;">
-          Implemented secure login systems with <strong>Forms Authentication</strong>
-          and <strong>role-based access control</strong>. Integrated biometric
-          authentication (fingerprint, IRIS, face) with MVC-based access
-          control systems.
-        </p>
-      </div>
-
-      <div class="skill-card">
-        <h4>📦 Projects Using MVC</h4>
-        <p style="font-size:0.9em; color:#555; line-height:1.7;">
-          ✅ Biometric Access Control Suite<br/>
-          ✅ Web Order System – UI Redesign<br/>
-          ✅ Inventory Management System<br/>
-          ✅ Housing Society Management<br/>
-          ✅ Time & Attendance System
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
+<!-- ===== PROJECTS ===== -->
 <section id="projects">
   <h2>💼 Featured Projects</h2>
 
-  <!-- Project 1 -->
   <div class="project-card">
     <h3>1. Tax Processing Integration Platform</h3>
-    <p class="meta">SurePrep (India) Pvt. Ltd. | Dec 2022 – Present</p>
-    <div class="tags">
-      <span>C#</span><span>.NET Core</span><span>REST API</span>
-      <span>Webhook Agent</span><span>TransitHub</span><span>GitHub</span>
+    <div class="meta">SurePrep (India) Pvt. Ltd. | Dec 2022 – Present</div>
+    <div class="stack">
+      <span>C#</span><span>.NET Core</span><span>ASP.NET MVC</span>
+      <span>REST API</span><span>Webhook Agent</span><span>TransitHub</span><span>GitHub</span>
     </div>
     <ul>
-      <li>End-to-end design of a Webhook Agent and REST APIs enabling real-time data exchange between tax systems and third-party platforms</li>
-      <li>Built a real-time event-driven Webhook Agent, reducing manual integration effort</li>
-      <li>Designed and implemented 10+ REST APIs improving data flow reliability across platforms</li>
-      <li>Contributed to TransitHub workflows for streamlined data routing and processing</li>
-      <li>Participated in GitHub code reviews maintaining consistent coding standards</li>
+      <li>Built real-time event-driven Webhook Agent, reducing manual integration effort and enabling instant notifications across tax processing systems.</li>
+      <li>Designed and implemented 10+ REST APIs for data exchange across tax platforms and third-party services, improving data flow reliability.</li>
+      <li>Built scalable MVC web applications using clean architecture with proper separation of concerns.</li>
+      <li>Utilized GitHub Copilot and Claude AI for accelerated development, improving velocity by 30%.</li>
+      <li>Participated in GitHub-based code reviews within a team of 5–8, maintaining consistent coding standards.</li>
     </ul>
   </div>
 
-  <!-- Project 2 -->
   <div class="project-card">
     <h3>2. Inventory Management System – Angular Migration</h3>
-    <p class="meta">Tata Consultancy Services Ltd. (TCS) | Aug 2021 – Dec 2022</p>
-    <div class="tags">
-      <span>Angular 13</span><span>C#</span><span>MVC</span><span>SQL Server</span>
-      <span>Windows Services</span><span>Karma</span><span>Jasmine</span><span>GitHub</span>
+    <div class="meta">Tata Consultancy Services Ltd. (TCS) | Aug 2021 – Dec 2022</div>
+    <div class="stack">
+      <span>Angular 13</span><span>C#</span><span>ASP.NET MVC</span>
+      <span>SQL Server</span><span>Windows Services</span><span>Karma</span><span>Jasmine</span><span>GitHub</span>
     </div>
     <ul>
-      <li>Full frontend modernization — migrated 20+ components from Angular 1 to Angular 13 with comprehensive unit testing</li>
-      <li>Achieved ~85% unit test coverage using Karma & Jasmine, reducing regression bugs</li>
-      <li>Automated CSV delivery via Windows Service, eliminating manual FTP uploads</li>
-      <li>Implemented a new authentication layer for the product status module</li>
-      <li>Migrated data across multiple DB instances with zero data loss</li>
+      <li>Led migration of 20+ components from Angular 1 to Angular 13; achieved ~85% unit test coverage using Karma & Jasmine.</li>
+      <li>Refactored legacy code to follow MVC architectural patterns, improving code maintainability and testability.</li>
+      <li>Extended stored procedures across multiple servers; automated CSV delivery via Windows Service, eliminating manual FTP uploads.</li>
+      <li>Implemented new authentication layer and added reporting columns, improving audit traceability.</li>
     </ul>
-    <div class="mvc-highlight">
-      <strong>🏗️ MVC Role:</strong> Used ASP.NET MVC for backend routing and controller logic,
-      managing product status modules and authentication workflows with role-based access control.
-    </div>
   </div>
 
-  <!-- Project 3 -->
   <div class="project-card">
-    <h3>3. Biometric Access Control Suite</h3>
-    <p class="meta">EINS Technologies India Pvt. Ltd. | Mar 2017 – Mar 2020</p>
-    <div class="tags">
+    <h3>3. Web Order System – UI Redesign & FTP Automation</h3>
+    <div class="meta">BOP Consultants Pvt. Ltd. | Dec 2020 – Aug 2021</div>
+    <div class="stack">
+      <span>Classic ASP</span><span>C#</span><span>ASP.NET MVC</span>
+      <span>Bootstrap</span><span>CSS</span><span>SQL Server</span><span>Windows Services</span><span>VB6</span>
+    </div>
+    <ul>
+      <li>Redesigned 20+ web pages using CSS and Bootstrap, improving UI consistency across the platform.</li>
+      <li>Converted Classic ASP pages to ASP.NET MVC architecture, improving performance and maintainability.</li>
+      <li>Replaced nightly batch jobs with real-time SQL triggers, ensuring instant Excel report delivery.</li>
+    </ul>
+  </div>
+
+  <div class="project-card">
+    <h3>4. Biometric Access Control Suite</h3>
+    <div class="meta">EINS Technologies India Pvt. Ltd. | Mar 2017 – Mar 2020</div>
+    <div class="stack">
       <span>C#</span><span>ASP.NET MVC</span><span>WinForms</span>
       <span>SQL Server</span><span>Biometric SDK</span><span>Windows Services</span>
     </div>
     <ul>
-      <li>Developed and delivered 6 end-to-end security products integrating Biometric SDKs (fingerprint, IRIS, face, finger vein) with IP Controllers</li>
-      <li>✅ Time & Attendance System</li>
-      <li>✅ Access Control (PC Fingerprint Login)</li>
-      <li>✅ CCTV Surveillance</li>
-      <li>✅ Elevator Management</li>
-      <li>✅ Biometric Template Management</li>
-      <li>✅ Housing Society Management</li>
+      <li>Developed and delivered 6 end-to-end security products integrating Biometric SDKs (fingerprint, IRIS, face, finger vein) with IP Controllers.</li>
+      <li>Built comprehensive MVC-based web management interfaces for biometric device configuration.</li>
+      <li>Products: Time & Attendance | Access Control | CCTV Surveillance | Elevator Management | Biometric Template Management | Housing Society Management</li>
     </ul>
-    <div class="mvc-highlight">
-      <strong>🏗️ MVC Role:</strong> Built the admin dashboard and device management portal using
-      ASP.NET MVC with Razor Views. Controllers handled biometric device communication,
-      user enrollment, and access log reporting.
-    </div>
-  </div>
-
-  <!-- Project 4 -->
-  <div class="project-card">
-    <h3>4. Web Order System – UI Redesign & FTP Automation</h3>
-    <p class="meta">BOP Consultants Pvt. Ltd. | Dec 2020 – Aug 2021</p>
-    <div class="tags">
-      <span>Classic ASP</span><span>ASP.NET MVC</span><span>C#</span>
-      <span>Bootstrap</span><span>CSS</span><span>SQL Server</span>
-      <span>Windows Services</span><span>VB6</span>
-    </div>
-    <ul>
-      <li>UI modernization and backend automation for a web-based order management system</li>
-      <li>Redesigned 20+ web pages to a new client-approved template using CSS and Bootstrap</li>
-      <li>Expanded the system to multiple new sites via SQL and VB6 config changes</li>
-      <li>Replaced nightly batch jobs with real-time SQL triggers for instant FTP delivery</li>
-    </ul>
-    <div class="mvc-highlight">
-      <strong>🏗️ MVC Role:</strong> Migrated legacy Classic ASP pages to ASP.NET MVC structure,
-      implementing clean controller actions for order processing, FTP automation triggers,
-      and Bootstrap-based Razor Views for the redesigned UI.
-    </div>
   </div>
 
 </section>
 
-<!-- EXPERIENCE -->
+<!-- ===== EXPERIENCE ===== -->
 <section id="experience">
   <h2>📈 Experience Timeline</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3>Software Engineer</h3>
-      <p class="company">SurePrep (India) Private Limited — Mumbai, India</p>
-      <p class="duration">Dec 2022 – Present</p>
-    </div>
-    <div class="timeline-item">
-      <h3>System Engineer</h3>
-      <p class="company">Tata Consultancy Services Ltd. (TCS) — Mumbai, India</p>
-      <p class="duration">Aug 2021 – Dec 2022</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Software Developer</h3>
-      <p class="company">BOP Consultants Pvt. Ltd. — Mumbai, India</p>
-      <p class="duration">Dec 2020 – Aug 2021</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Senior Software Developer</h3>
-      <p class="company">EINS Technologies India Pvt. Ltd. — Mumbai, India</p>
-      <p class="duration">Mar 2017 – Mar 2020</p>
-    </div>
+
+  <div class="exp-item">
+    <h3>Software Engineer</h3>
+    <div class="company">SurePrep (India) Private Limited — Mumbai, India</div>
+    <div class="period">December 2022 – Present &nbsp;|&nbsp; 2+ years &nbsp;|&nbsp; Team: 5–8 members</div>
+    <div class="stack-line">Stack: C#, .NET Core, ASP.NET MVC, REST API, Webhook Agent, TransitHub, GitHub, Azure DevOps</div>
+    <ul>
+      <li><strong>Webhook Agent:</strong> Built and maintained real-time event-driven Webhook Agent, reducing manual integration effort and enabling instant notifications.</li>
+      <li><strong>REST API Development:</strong> Designed and implemented 10+ REST APIs for data exchange across tax platforms and third-party services.</li>
+      <li><strong>ASP.NET MVC Development:</strong> Built scalable web applications using clean MVC architecture with proper separation of concerns.</li>
+      <li><strong>AI-Enhanced Development:</strong> Utilized GitHub Copilot and Claude AI for accelerated development and automated unit test generation, improving velocity by 30%.</li>
+      <li><strong>Code Quality:</strong> Participated in GitHub-based code reviews, maintaining consistent coding standards and reducing post-release defects.</li>
+      <li><strong>Agile / Scrum:</strong> Worked within Agile/Scrum sprints, participating in sprint planning, daily stand-ups, and retrospectives; transitioned to Azure DevOps (ADO) for work item tracking and sprint boards.</li>
+    </ul>
   </div>
+
+  <div class="exp-item">
+    <h3>System Engineer</h3>
+    <div class="company">Tata Consultancy Services Ltd. (TCS) — Mumbai, India</div>
+    <div class="period">August 2021 – December 2022 &nbsp;|&nbsp; 1 year 4 months &nbsp;|&nbsp; Team: 6 members</div>
+    <div class="stack-line">Stack: C#, Angular 12/13, SQL Server, Windows Services, VB, GitHub, Karma & Jasmine</div>
+    <ul>
+      <li><strong>Angular Migration:</strong> Led migration of 20+ components from Angular 1 to Angular 13; achieved ~85% unit test coverage using Karma & Jasmine.</li>
+      <li><strong>MVC Implementation:</strong> Refactored legacy code to follow MVC architectural patterns, improving code maintainability and testability.</li>
+      <li><strong>DB Enhancement:</strong> Extended stored procedures across multiple servers; automated CSV delivery via Windows Service, eliminating manual FTP uploads.</li>
+      <li><strong>Auth & Reporting:</strong> Implemented new authentication layer and added reporting columns, improving audit traceability.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <h3>Software Developer</h3>
+    <div class="company">BOP Consultants Pvt. Ltd. — Mumbai, India</div>
+    <div class="period">December 2020 – August 2021 &nbsp;|&nbsp; 9 months &nbsp;|&nbsp; Team: 4–5 members</div>
+    <div class="stack-line">Stack: Classic ASP, C#, Bootstrap, CSS, SQL Server, Windows Services, VB6</div>
+    <ul>
+      <li><strong>UI Redesign:</strong> Redesigned 20+ web pages using CSS and Bootstrap, improving UI consistency across the platform.</li>
+      <li><strong>MVC Migration:</strong> Converted Classic ASP pages to ASP.NET MVC architecture, improving performance and maintainability.</li>
+      <li><strong>FTP Automation:</strong> Replaced nightly batch job with real-time SQL triggers, ensuring instant Excel report delivery.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item career-break">
+    <h3>Career Break</h3>
+    <div class="period">March 2020 – December 2020 &nbsp;|&nbsp; 9 months</div>
+    <ul>
+      <li>Career break due to the COVID-19 pandemic; utilized the period for personal development and upskilling in ASP.NET MVC and Angular.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <h3>Senior Software Developer</h3>
+    <div class="company">EINS Technologies India Pvt. Ltd. — Mumbai, India</div>
+    <div class="period">March 2017 – March 2020 &nbsp;|&nbsp; 3 years &nbsp;|&nbsp; Team: 3–5 members</div>
+    <div class="stack-line">Stack: C#, ASP.NET MVC, WinForms, SQL Server, Windows Services, Biometric SDK</div>
+    <ul>
+      <li>Delivered 6 end-to-end products in the security and access control domain, integrating Biometric SDKs (fingerprint/IRIS) with IP Controllers.</li>
+      <li><strong>MVC Web Applications:</strong> Built comprehensive web-based management interfaces using ASP.NET MVC for biometric device configuration.</li>
+      <li><strong>Products delivered:</strong> Time & Attendance | Access Control | CCTV Surveillance | Elevator Management | Biometric Template Management | Housing Society Management</li>
+    </ul>
+  </div>
+
 </section>
 
-<!-- EDUCATION -->
+<!-- ===== EDUCATION ===== -->
 <section id="education">
   <h2>🎓 Education</h2>
-  <div class="edu-grid">
-    <div class="edu-card">
-      <h3>B.E. (Computer / IT)</h3>
-      <p>JSPM's Bhivrabai Sawant Institute of Technology & Research<br/>Pune University | 2016</p>
-      <p class="percentage">60.13%</p>
-    </div>
-    <div class="edu-card">
-      <h3>Diploma – Computer Technology</h3>
-      <p>Bharati Vidyapeeth Institute of Technology<br/>Mumbai University | 2013</p>
-      <p class="percentage">70.26%</p>
-    </div>
-    <div class="edu-card">
-      <h3>SSC (10th)</h3>
-      <p>Shiravane Vidyalaya & Jr. College, Nerul<br/>State Board | 2010</p>
-      <p class="percentage">77.45%</p>
-    </div>
+
+  <div class="edu-item">
+    <h3>B.E. (Computer Engineering / IT)</h3>
+    <p>JSPM's Bhivrabai Sawant Institute of Technology & Research</p>
+    <p>Pune University &nbsp;|&nbsp; 2016 &nbsp;|&nbsp; 60.13%</p>
   </div>
+
+  <div class="edu-item">
+    <h3>Diploma – Computer Technology</h3>
+    <p>Bharati Vidyapeeth Institute of Technology</p>
+    <p>Mumbai University &nbsp;|&nbsp; 2013 &nbsp;|&nbsp; 70.26%</p>
+  </div>
+
 </section>
 
-<!-- CONTACT -->
+<!-- ===== CONTACT ===== -->
 <section id="contact">
   <h2>📬 Contact Me</h2>
   <div class="contact-grid">
-    <div class="contact-card">
-      <div class="icon">📞</div>
-      <a href="tel:+918788958177">+91 8788958177</a>
-    </div>
-    <div class="contact-card">
-      <div class="icon">📧</div>
-      <a href="mailto:ermlkorde@gmail.com">ermlkorde@gmail.com</a>
-    </div>
-    <div class="contact-card">
-      <div class="icon">📍</div>
-      <p>Juinagar, Navi Mumbai – 400 706</p>
-    </div>
-    <div class="contact-card">
-      <div class="icon">🔗</div>
-      <a href="https://linkedin.com/in/monika-s-25354a117" target="_blank">LinkedIn Profile</a>
-    </div>
-    <div class="contact-card">
-      <div class="icon">🌐</div>
-      <a href="https://monika-shinde-tech.github.io/" target="_blank">monika-shinde-tech.github.io</a>
-    </div>
+    <div class="contact-item">📞 &nbsp;+91 8788958177</div>
+    <div class="contact-item">📧 &nbsp;<a href="mailto:ermlkorde@gmail.com">ermlkorde@gmail.com</a></div>
+    <div class="contact-item">📍 &nbsp;Navi Mumbai, Maharashtra</div>
+    <div class="contact-item">🔗 &nbsp;<a href="https://www.linkedin.com/in/monika-s-25354a117/" target="_blank">linkedin.com/in/monika-s-25354a117</a></div>
+  </div>
+  <br/>
+  <div class="btn-wrap">
+    <a class="download-btn" href="Monika_Shinde_Senior_Software_Engineer.pdf" download>
+      ⬇️ Download Resume
+    </a>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer>
-  <p>© 2024 Monika Akash Shinde &nbsp;|&nbsp; Senior Software Engineer &nbsp;|&nbsp;
-  <a href="mailto:ermlkorde@gmail.com">ermlkorde@gmail.com</a> &nbsp;|&nbsp;
-  <a href="https://monika-shinde-tech.github.io/" target="_blank">🌐 monika-shinde-tech.github.io</a>
-  </p>
+  &copy; 2025 Monika Akash Shinde &nbsp;|&nbsp; Senior Software Engineer &nbsp;|&nbsp;
+  <a href="mailto:ermlkorde@gmail.com">ermlkorde@gmail.com</a>
 </footer>
 
 </body>
